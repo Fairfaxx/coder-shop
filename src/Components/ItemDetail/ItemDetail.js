@@ -19,7 +19,7 @@ export default function ItemDetail({ item, loading, contador, setContador, handl
                     <div className='description-name-button-detail'>
                         <h3 className='h3-size margin-bottom'>{item.nombre}</h3>
                         <p className="text-start"> {item.description}</p>
-                        <p className="text-start margin-bottom"> Telgo Diama de 2 plazas cuenta con estructura de resortes Bonell bicónicos de acero templado entrelazados y marco perimetral que aporta rigidez. </p>
+                        <p className="text-start margin-bottom"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, tempora nemo velit perspiciatis expedita iusto reiciendis quod doloremque, nostrum accusantium illum eligendi tempore tenetur qui iste beatae natus voluptate voluptatibus? </p>
                         <p className="price-detail">${item.precio}</p>
                         <p className="text-start margin-bottom">{item.quantity} en Stock!</p>
                         <div className="contadorItem">
