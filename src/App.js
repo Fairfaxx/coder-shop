@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
 import HomeContainer from './Containers/HomeContainer';
@@ -17,6 +17,7 @@ import './App.css';
 
 function App() {
   const [tipo, setTipo] = useState('inicia')
+
   return (
 
     <div className="App">

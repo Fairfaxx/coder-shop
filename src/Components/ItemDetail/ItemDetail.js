@@ -5,8 +5,10 @@ import './itemDetail.css'
 
 
 export default function ItemDetail({ item, loading, contador, setContador, handleComprar }) {
-
+    console.log('Desde ItemDetail', contador)
+    console.log('Desde ItemDetail', item)
     return (
+
         loading ?
             <div>Loading...</div>
             :
@@ -23,7 +25,7 @@ export default function ItemDetail({ item, loading, contador, setContador, handl
                         <p className="price-detail">${item.precio}</p>
                         <p className="text-start margin-bottom">{item.quantity} en Stock!</p>
                         <div className="contadorItem">
-                            <Contador className='width-200px' min={0} max={item.stock} contador={contador} setContador={setContador}>Agregar</Contador>
+                            {/* <Contador className='width-200px' min={0} max={item.stock} contador={contador} setContador={setContador}>Agregar</Contador> */}
                         </div>
                         {
                             contador > 0 ?
@@ -39,14 +41,13 @@ export default function ItemDetail({ item, loading, contador, setContador, handl
                                 </div>
                                 :
                                 <div>
-                                    <button className='btn-detail' onClick={() => setContador(contador + 1)}>Agregar</button>
+                                    <button className='btn-detail' onClick={() => setContador(contador + 1)}>Agregar al Carrito</button>
                                     <div>
                                         <Link to={'/'} className='links'>
                                             <button className='btn-detail margin-bottom-400px'> Volver a Home</button>
                                         </Link>
                                     </div>
                                 </div>
-
                         }
                     </div>
                 </div>

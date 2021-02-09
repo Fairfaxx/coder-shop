@@ -6,6 +6,7 @@ const CartContext = (props) => {
 
     const [cartItems, setCartItems] = useState([])
 
+    console.log('Desde CartContext', cartItems);
 
     return (
         <Context.Provider value={[cartItems, setCartItems]}>

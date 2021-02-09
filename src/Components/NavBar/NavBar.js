@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import CartIcon from '../CartIcon/CartIcon';
 import './navbar.css'
 
 export default function NavBar({ type, setTipo }) {
 
     const [vip, setVip] = useState("Inicia sesion");
     const [user, setUser] = useState("");
+
 
     useEffect(() => {
         const nombre = setTimeout(() => {
@@ -34,7 +36,7 @@ export default function NavBar({ type, setTipo }) {
                     <NavLink to='/categories' className='links-nav'><p className='nav-link'>categorias</p></NavLink>
                 </div>
                 <div>
-
+                    <CartIcon name={user} />
                     <button onClick={handleVip} className="buttonVip">
                         <p className={`to-${type}`}>{vip}</p>
                     </button>

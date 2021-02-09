@@ -27,9 +27,9 @@ export default function Cart({ cartItems, total, envio }) {
                                         <tr key={idx}>
                                             <td class='number' >{idx + 1}</td>
                                             <td class='name' >{item.name}</td>
-                                            <td class='name' style={{ textAlign: 'center' }}>${item.price}</td>
+                                            <td class='name' style={{ textAlign: 'center' }}>${item.precio}</td>
                                             <td class='name' style={{ textAlign: 'center' }}>{item.qty}</td>
-                                            <td class='name' style={{ textAlign: 'center' }}>${item.price * item.qty}</td>
+                                            <td class='name' style={{ textAlign: 'center' }}>${item.precio * item.qty}</td>
                                         </tr>
                                     )
                                 }

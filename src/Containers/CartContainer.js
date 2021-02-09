@@ -14,7 +14,7 @@ export default function CartContainer() {
     useEffect(() => {
         cartItems &&
             cartItems.map((item) =>
-                setTotal((prevTotal) => prevTotal + item.price * item.qty)
+                setTotal((prevTotal) => prevTotal + item.precio * item.qty)
             );
     }, [cartItems]);
 

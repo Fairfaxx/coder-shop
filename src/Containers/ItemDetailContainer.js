@@ -25,7 +25,8 @@ const ItemDetailContainer = () => {
                     return true;
                 }
                 const dataQuery = doc.data();
-                setItem({ id: doc.id, ...doc.data() });
+                setItem({ id: doc.id, ...doc.data() }, dataQuery);
+                console.log(dataQuery);
             })
             .catch((error) => {
                 console.log('Ocurrio un error', error);
@@ -34,6 +35,8 @@ const ItemDetailContainer = () => {
                 setLoading(false);
             })
     }, [id]);
+
+
 
     const handleComprar = () => {
         let alreadyIn = false;
