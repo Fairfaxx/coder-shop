@@ -8,8 +8,8 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
     const [item, setItem] = useState();
     const [loading, setLoading] = useState(true);
-    const [contador, setContador] = useState(0)
-    const [cartItems, setCartItems] = useContext(Context);
+    const { contador, setContador } = useContext(Context);
+    const { cartItems, setCartItems } = useContext(Context);
     const [modal, setModal] = useState(false);
 
 

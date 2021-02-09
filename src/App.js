@@ -5,7 +5,7 @@ import NavBar from './Components/NavBar/NavBar';
 import HomeContainer from './Containers/HomeContainer';
 import CartContainer from './Containers/CartContainer';
 import ItemDetailContainer from './Containers/ItemDetailContainer';
-import CartContext from './Context/CartContext';
+import { CartContext } from './Context/CartContext';
 import CategoryContainer from './Containers/CategoryContainer';
 import CheckOutContainer from "./Containers/CheckOutContainer/CheckOutContainer";
 import Saludo from './Components/Saludo/Saludo'

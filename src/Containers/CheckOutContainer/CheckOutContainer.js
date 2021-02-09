@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import './input.css'
 
 export default function CheckOutContainer() {
-    const [cartItems] = useContext(Context);
+    const { cartItems } = useContext(Context);
     const [orderId, setOrderId] = useState("");
     const [loading, setLoading] = useState([]);
     const [name, setName] = useState("");

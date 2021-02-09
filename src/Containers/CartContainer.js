@@ -7,7 +7,7 @@ import Cart from '../Components/Cart/Cart';
 import 'firebase/firestore';
 
 export default function CartContainer() {
-    const [cartItems] = useContext(Context);
+    const { cartItems } = useContext(Context);
     const [total, setTotal] = useState(0);
     const [envio] = useState(100);
 
