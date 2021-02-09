@@ -9,13 +9,13 @@ export default function Categories({ list }) {
             {
                 list && list.categories && list.categories.map((cat, idx) => (
                     <Link to={`/categories/${cat.id}`}>
-                        <div style={{ width: '18rem' }} key={idx}>
+                        <div style={{ width: '18rem' }} key={cat.id}>
                             <div className='category-item'>
                                 <div className='title-item-category margin-bottom-category' style={{ textTransform: 'uppercase' }}>{cat.relojes}</div>
                                 <div className='subtitle-category'>
                                     {cat.description}
                                 </div>
-                                <p className='color-violet'>Ver {cat.name}</p>
+                                <p className='color-violet'>Ver {cat.nombre}</p>
                             </div>
                         </div>
                     </Link>
