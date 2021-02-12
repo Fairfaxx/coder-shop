@@ -7,7 +7,7 @@ import Cart from '../Components/Cart/Cart';
 import 'firebase/firestore';
 
 export default function CartContainer() {
-    const { cartItems } = useContext(Context);
+    const { cartItems, setCartItems } = useContext(Context);
     const [total, setTotal] = useState(0);
     const [envio] = useState(100);
 
@@ -18,12 +18,17 @@ export default function CartContainer() {
             );
     }, [cartItems]);
 
+    const deleteCartItems = () => {
+        setCartItems([])
+    }
     return (
         <div>
-            <Cart cartItems={cartItems} total={total} envio={envio} />
+            <Cart cartItems={cartItems} total={total} envio={envio} deleteCartItems={deleteCartItems} />
         </div>
     );
 };
+
+
 
 
 
