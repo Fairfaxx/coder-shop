@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import CheckOutContainer from '../../Containers/CheckOutContainer/CheckOutContainer';
 import './cartStyle.css'
 
-export default function Cart({ cartItems, total, envio }) {
+export default function Cart({ cartItems, total, envio, deleteCartItems }) {
 
     return (
         <div className='cartPageStyle'>
@@ -46,9 +46,12 @@ export default function Cart({ cartItems, total, envio }) {
                             </tbody>
                         </table>
                     </div>
-                    <div className=''>
+                    <div className='d-flex flex-row justify-content-center'>
                         <Link to={'/'}>
                             <button className="btn-detail-card"> ir a Home</button>
+                        </Link>
+                        <Link to={'/'}>
+                            <button onClick={deleteCartItems} className="ml-2 btn-detail-card">Vaciar el Carrito</button>
                         </Link>
                         <Link to={'/checkout/'}>
                             <button className="btn-detail-card links-card"> Comprar</button>
